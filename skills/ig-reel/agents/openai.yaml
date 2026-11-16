@@ -1,0 +1,4 @@
+interface:
+  display_name: "IG Reel"
+  short_description: "Write a Reel script from what already performed"
+  default_prompt: "Use $ig-reel to write a Reel about how I used AI to get a reply from a client in one day."

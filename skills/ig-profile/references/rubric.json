@@ -1,0 +1,293 @@
+{
+  "version": 1,
+  "checked": "2026-11-16",
+  "about": "Our own rubric for an Instagram profile. Each part holds criteria; each criterion is rated met (1), partly (0.5), missed (0) or unseen. basis: platform = rests on something Instagram itself says (see sources); judgement = our own view of what makes a stranger follow. Sources are ids in references/sources.md. scripts/score_profile.py refuses to run unless the points add to exactly 100.",
+  "parts": [
+    {
+      "id": "name",
+      "title": "Name field",
+      "criteria": [
+        {
+          "id": "name.search_term",
+          "points": 8,
+          "basis": "platform",
+          "sources": ["ig-search-2021"],
+          "check": "Beside the person's name, the name field holds the words a stranger would type to find this kind of account (the topic, the job, the place), not only a name.",
+          "met": "a topic or role word someone would search, e.g. 'Ana | Meal prep for one'",
+          "partly": "a word that hints at the topic but nobody searches for it",
+          "missed": "only a name, a nickname, emoji or a copy of the handle"
+        },
+        {
+          "id": "name.known_by",
+          "points": 4,
+          "basis": "platform",
+          "sources": ["ig-search-2021"],
+          "check": "The name people already know them by is there, spelled the way they would type it.",
+          "met": "real name or brand name in plain letters",
+          "partly": "present, but in fancy Unicode letters or an unusual spelling search may not match",
+          "missed": "absent"
+        },
+        {
+          "id": "name.readable",
+          "points": 3,
+          "basis": "judgement",
+          "sources": ["name-length-guides"],
+          "check": "Short enough to read in one glance on a phone: about 30 characters or fewer, at most one separator, no more than one emoji.",
+          "met": "reads in one glance",
+          "partly": "a little long or busy",
+          "missed": "cut off, stuffed with keywords, or mostly symbols"
+        }
+      ]
+    },
+    {
+      "id": "handle",
+      "title": "Handle",
+      "criteria": [
+        {
+          "id": "handle.findable",
+          "points": 5,
+          "basis": "platform",
+          "sources": ["ig-search-2021", "ig-help-profile-info"],
+          "check": "Easy to say out loud and spell from hearing it once, and matches the name people know. Few dots, underscores or numbers.",
+          "met": "say it once and someone can type it",
+          "partly": "one awkward dot, underscore or number",
+          "missed": "hard to spell, or unrelated to the name"
+        }
+      ]
+    },
+    {
+      "id": "bio",
+      "title": "Bio",
+      "criteria": [
+        {
+          "id": "bio.who_for",
+          "points": 8,
+          "basis": "judgement",
+          "sources": [],
+          "check": "The first line tells a stranger who this account is for and what they get from following, in plain words.",
+          "met": "'Easy dinners for people who hate cooking' style: audience and payoff",
+          "partly": "says the topic but not what the follower gets",
+          "missed": "a quote, a list of identities, or nothing a stranger can use"
+        },
+        {
+          "id": "bio.keywords",
+          "points": 5,
+          "basis": "platform",
+          "sources": ["ig-search-2021", "ig-help-bio"],
+          "check": "The bio contains the words people search for this topic (and the place, for a local business), as plain words within the 150-character limit.",
+          "met": "the main search words appear as words",
+          "partly": "only as hashtags or vague synonyms",
+          "missed": "none"
+        },
+        {
+          "id": "bio.proof",
+          "points": 4,
+          "basis": "judgement",
+          "sources": [],
+          "check": "One concrete reason to believe them: a result, a number, a credential, a well-known client, years doing it.",
+          "met": "one specific, checkable claim",
+          "partly": "a vague claim ('expert', 'passionate')",
+          "missed": "none"
+        },
+        {
+          "id": "bio.scannable",
+          "points": 3,
+          "basis": "judgement",
+          "sources": ["ig-help-bio"],
+          "check": "Short lines that scan in two seconds; no wall of text, no line that only holds emoji.",
+          "met": "two to four short lines",
+          "partly": "one long block or filler lines",
+          "missed": "hard to read"
+        }
+      ]
+    },
+    {
+      "id": "action",
+      "title": "Next step",
+      "criteria": [
+        {
+          "id": "action.one_ask",
+          "points": 6,
+          "basis": "judgement",
+          "sources": [],
+          "check": "The bio ends on one thing to do next (tap the link for X, DM a word, start with the pinned post), and the reason to do it.",
+          "met": "one clear ask with a reason",
+          "partly": "an ask with no reason, or two competing asks",
+          "missed": "no ask"
+        },
+        {
+          "id": "action.matches_link",
+          "points": 4,
+          "basis": "judgement",
+          "sources": [],
+          "check": "What the ask promises is what the link or the DM actually delivers.",
+          "met": "promise and destination match",
+          "partly": "loosely related",
+          "missed": "the ask points nowhere, or somewhere else"
+        }
+      ]
+    },
+    {
+      "id": "link",
+      "title": "Links",
+      "criteria": [
+        {
+          "id": "link.present",
+          "points": 4,
+          "basis": "platform",
+          "sources": ["ig-help-website", "five-links-2023"],
+          "check": "At least one link in the Links section (Instagram allows up to 5).",
+          "met": "a working link",
+          "partly": "a URL typed into the bio text, which is not clickable there",
+          "missed": "no link"
+        },
+        {
+          "id": "link.first_is_best",
+          "points": 6,
+          "basis": "platform",
+          "sources": ["ig-help-website", "five-links-2023"],
+          "check": "The first link, the only one shown in full on the profile, goes to the single most useful destination, and it is labelled so people know what they get.",
+          "met": "the top link is the main offer, with a clear title",
+          "partly": "a generic link page or homepage first, or an unlabelled URL",
+          "missed": "first link is stale, broken or off-topic"
+        }
+      ]
+    },
+    {
+      "id": "photo",
+      "title": "Profile photo",
+      "criteria": [
+        {
+          "id": "photo.recognisable",
+          "points": 5,
+          "basis": "judgement",
+          "sources": [],
+          "check": "Recognisable as a small circle: a clear face (person) or a simple logo (brand), high contrast, nothing small to read.",
+          "met": "clear at thumbnail size",
+          "partly": "busy, dark or far away",
+          "missed": "default avatar or unreadable"
+        }
+      ]
+    },
+    {
+      "id": "account",
+      "title": "Account type and category",
+      "criteria": [
+        {
+          "id": "account.professional_category",
+          "points": 5,
+          "basis": "judgement",
+          "sources": ["ig-help-professional"],
+          "check": "A creator or business account whose shown category (if shown) fits what the account posts.",
+          "met": "professional account, fitting category or category hidden on purpose",
+          "partly": "professional account with a mismatched category",
+          "missed": "personal account for someone trying to grow an audience"
+        }
+      ]
+    },
+    {
+      "id": "highlights",
+      "title": "Highlights",
+      "criteria": [
+        {
+          "id": "highlights.exist",
+          "points": 3,
+          "basis": "platform",
+          "sources": ["ig-help-highlights"],
+          "check": "Highlights are used: stories that answer a newcomer's first questions stay on the profile after they expire.",
+          "met": "two or more useful highlights",
+          "partly": "one, or several that are leftovers",
+          "missed": "none"
+        },
+        {
+          "id": "highlights.named",
+          "points": 4,
+          "basis": "judgement",
+          "sources": [],
+          "check": "Each title says what is inside in one or two words that show in full under the circle; no emoji-only titles.",
+          "met": "plain titles like 'Start here', 'Results', 'Recipes'",
+          "partly": "some vague or cut off",
+          "missed": "emoji, dates or inside jokes"
+        },
+        {
+          "id": "highlights.order",
+          "points": 3,
+          "basis": "judgement",
+          "sources": [],
+          "check": "The first highlight is the one a newcomer needs first (what this is, start here, results), not the oldest trip.",
+          "met": "newcomer order",
+          "partly": "useful ones present but buried",
+          "missed": "first ones are personal or stale"
+        }
+      ]
+    },
+    {
+      "id": "pinned",
+      "title": "Pinned posts",
+      "criteria": [
+        {
+          "id": "pinned.used",
+          "points": 4,
+          "basis": "platform",
+          "sources": ["ig-help-pin", "pin-2022"],
+          "check": "Posts are pinned to the top of the grid (up to 3).",
+          "met": "two or three pinned",
+          "partly": "one pinned",
+          "missed": "none pinned"
+        },
+        {
+          "id": "pinned.jobs",
+          "points": 6,
+          "basis": "judgement",
+          "sources": [],
+          "check": "The pins do three different jobs for a newcomer: who this is and what the account is about, the best proof (most-shared or best result), and the offer or way in.",
+          "met": "intro, proof and offer covered",
+          "partly": "pins are good posts but do the same job, or one is stale",
+          "missed": "pins are old announcements or off-topic"
+        }
+      ]
+    },
+    {
+      "id": "grid",
+      "title": "Grid",
+      "criteria": [
+        {
+          "id": "grid.topic_visible",
+          "points": 3,
+          "basis": "judgement",
+          "sources": [],
+          "check": "The top three rows make the topic obvious at a glance: someone could say what the account is about without opening a post.",
+          "met": "one clear topic",
+          "partly": "two or three topics mixed",
+          "missed": "no visible thread"
+        },
+        {
+          "id": "grid.covers_fit",
+          "points": 2,
+          "basis": "platform",
+          "sources": ["grid-2025"],
+          "check": "Covers read in the tall profile thumbnail: the subject and any text sit in the centre, nothing important is cropped off the top or bottom.",
+          "met": "covers read cleanly",
+          "partly": "some cropped or tiny text",
+          "missed": "most covers unreadable"
+        }
+      ]
+    },
+    {
+      "id": "posting",
+      "title": "Recent posting",
+      "criteria": [
+        {
+          "id": "posting.recent_regular",
+          "points": 5,
+          "basis": "judgement",
+          "sources": ["posting-frequency"],
+          "check": "Posted in the last 14 days, at a pace they can keep (no long gaps in the last three months). Instagram gives no required frequency.",
+          "met": "recent and steady",
+          "partly": "recent but patchy, or steady but not in the last 14 days",
+          "missed": "nothing for over a month"
+        }
+      ]
+    }
+  ]
+}

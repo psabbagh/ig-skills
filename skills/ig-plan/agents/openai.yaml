@@ -1,0 +1,4 @@
+interface:
+  display_name: "IG Plan"
+  short_description: "Plan your Instagram week from your own numbers"
+  default_prompt: "Use $ig-plan to plan my Instagram week from my research and posting log."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "IG Voice"
+  short_description: "Make a caption or script sound like you, not AI"
+  default_prompt: "Use $ig-voice to make this caption sound like me before I post it."

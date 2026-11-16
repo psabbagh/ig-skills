@@ -1,0 +1,4 @@
+interface:
+  display_name: "IG Profile"
+  short_description: "Score your Instagram profile and rewrite what loses points"
+  default_prompt: "Use $ig-profile to score my Instagram profile and rewrite the weakest parts."

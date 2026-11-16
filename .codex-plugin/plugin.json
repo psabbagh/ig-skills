@@ -1,0 +1,41 @@
+{
+  "name": "ig-skills",
+  "version": "1.0.0",
+  "description": "Eight free Instagram skills: research the Reels doing best on your idea, write Reels off 26 hook formulas with the hook scored first, check a script for a cold listener, make drafts sound like you, write and check captions, score and rewrite your profile, handle comments, replies and keyword DMs, and plan your week. Read-only in your own browser; you post everything yourself. No API keys.",
+  "author": {
+    "name": "psabbagh",
+    "url": "https://github.com/psabbagh"
+  },
+  "homepage": "https://github.com/psabbagh/ig-skills",
+  "repository": "https://github.com/psabbagh/ig-skills",
+  "license": "MIT",
+  "keywords": [
+    "instagram",
+    "reels",
+    "hooks",
+    "captions",
+    "content",
+    "creator",
+    "social-media",
+    "skills"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "IG Skills",
+    "shortDescription": "Research, write and plan Instagram Reels in your voice",
+    "longDescription": "Eight skills for Instagram creators. Find the Reels doing best on your idea and why they worked, write a Reel off 26 hook formulas with the hook scored first, check that a script makes sense to someone hearing it cold, make captions, scripts, comments and DMs sound like you, write and check captions, score your profile out of 100 and rewrite what loses points, sort your comments and draft replies and keyword DMs, and plan your week from your own numbers. Instagram is read in your own signed-in browser, read-only; every output is text you post yourself. Free, no API keys.",
+    "developerName": "psabbagh",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/psabbagh/ig-skills",
+    "defaultPrompt": [
+      "Find the top Reels on \"<your idea>\" and show me how the winners open.",
+      "Write me a Reel about <the idea>, for <who it is for>.",
+      "Plan my Instagram week."
+    ]
+  }
+}

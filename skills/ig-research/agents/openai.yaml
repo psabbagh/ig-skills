@@ -1,0 +1,4 @@
+interface:
+  display_name: "IG Research"
+  short_description: "Top Instagram Reels on an idea, ranked by shares"
+  default_prompt: "Use $ig-research to find the top Reels on \"Claude can now watch YouTube videos\"."

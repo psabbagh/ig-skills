@@ -1,0 +1,4 @@
+interface:
+  display_name: "IG Script"
+  short_description: "Check a Reel script makes sense to someone hearing it cold"
+  default_prompt: "Use $ig-script to check this Reel script before I record it."

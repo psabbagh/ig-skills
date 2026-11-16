@@ -1,0 +1,22 @@
+{
+  "name": "ig-skills",
+  "version": "1.0.0",
+  "description": "Eight free Instagram skills: research the Reels doing best on your idea, write Reels off 26 hook formulas with the hook scored first, check a script for a cold listener, make drafts sound like you, write and check captions, score and rewrite your profile, handle comments, replies and keyword DMs, and plan your week. Read-only in your own browser; you post everything yourself. No API keys.",
+  "author": {
+    "name": "psabbagh",
+    "url": "https://github.com/psabbagh"
+  },
+  "homepage": "https://github.com/psabbagh/ig-skills",
+  "repository": "https://github.com/psabbagh/ig-skills",
+  "license": "MIT",
+  "keywords": [
+    "instagram",
+    "reels",
+    "hooks",
+    "captions",
+    "content",
+    "creator",
+    "social-media",
+    "skills"
+  ]
+}

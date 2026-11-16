@@ -1,0 +1,291 @@
+{
+  "about": "26 hook formulas for Instagram Reels. Each is a move an opening makes, not a sentence to copy. 'source' says where it came from: 'research' formulas were derived from the spoken and on-screen hooks of top Reels (ranked by shares per view) collected with ig-research in November 2026; 'craft' formulas come from general short-video writing practice and have no measured result behind them here. Examples are made up. 'cues' are patterns hooks.py uses to suggest which formula a winner's hook resembles. Each cue needs the formula's defining feature (free AND a deadline, a number AND hidden things, can't AND a way now), so a hook that only shares a word matches nothing: abstaining beats a wrong name. The model confirms or corrects every match.",
+  "formulas": [
+    {
+      "id": "what-it-did-for-me",
+      "name": "What it did for me",
+      "move": "Open on one specific thing the tool did for you, in the past tense, with a number or a name in it.",
+      "template": "My {tool} {did one specific thing} {for me / while I did something else}.",
+      "example": "My AI read 300 job ads overnight and kept the 12 worth applying to.",
+      "on_screen": "My AI read 300 job ads",
+      "use_when": "You have a real result of your own and the tool is the surprise.",
+      "source": "research",
+      "cues": ["^(my|i had my|i got my) (ai|claude|chatgpt|gemini|agent|assistant|bot)\\b.*\\b(\\w+ed|did|made|sent|wrote|read|found|built|kept|told|ran|took|caught|got)\\b", "\\bfor me\\b.*\\b(while|overnight|when)\\b"]
+    },
+    {
+      "id": "someone-elses-moment",
+      "name": "Someone else's moment",
+      "move": "Tell a stranger's small, vivid problem and that the tool solved it, as a story you are passing on.",
+      "template": "This {person} {had a specific problem}, so they {asked the tool}, and {what happened}.",
+      "example": "This woman dropped her ring in a storm drain, sent one photo to an AI, and it told her which grate to lift.",
+      "on_screen": "AI found her ring in a drain",
+      "use_when": "The best example isn't yours, and the problem is one viewers have had.",
+      "source": "research",
+      "cues": ["^(this|a|my) (guy|girl|woman|man|person|dad|mom|kid|lady|teacher|nurse|student|friend)\\b.*\\b(\\w+ed|had|lost|got|asked|sent|used|built)\\b"]
+    },
+    {
+      "id": "cant-until-this",
+      "name": "Can't, until this",
+      "move": "Name something viewers assume the tool cannot do, then say there is now a way.",
+      "template": "{Tool} can't {thing people assume} until you {add / turn on this}.",
+      "example": "Your AI can't see your calendar until you switch on one setting.",
+      "on_screen": "Your AI can't see your calendar (yet)",
+      "use_when": "The idea removes a limit people have run into themselves.",
+      "source": "research",
+      "cues": ["\\bcan'?t\\b.*\\b(until|unless|now)\\b", "\\bcannot\\b.*\\b(until|unless|now)\\b", "\\buntil now\\b", "\\b(can|could) now\\b", "\\bnow (it )?can\\b"]
+    },
+    {
+      "id": "overlooked-tool",
+      "name": "The overlooked tool",
+      "move": "Say a tool is one few people know about, and give the one reason it matters in the same breath.",
+      "template": "{Thing} is the most overlooked {category} right now, because it lets you {concrete benefit}.",
+      "example": "This is the most overlooked browser setting right now, because it stops every site from autoplaying video.",
+      "on_screen": "The setting nobody turns on",
+      "use_when": "The thing is real and little known, and its benefit fits in one clause.",
+      "source": "research",
+      "cues": ["\\b(slept[- ]on|underrated|overlooked|nobody (talks|knows|uses))\\b", "^did you know\\b", "\\bmost people (don'?t|never) (know|use)\\b"]
+    },
+    {
+      "id": "free-with-a-date",
+      "name": "Free, with a date",
+      "move": "Lead with something of value given away, and the date it stops.",
+      "template": "{Who} is giving {amount or thing} free, but only until {date}.",
+      "example": "The city library is giving out free museum passes, but only until Friday.",
+      "on_screen": "Free museum passes (until Friday)",
+      "use_when": "There is a real offer with a real end date. Never invent one.",
+      "source": "research",
+      "cues": ["\\bfree\\b.*\\b(until|till|before|by|ends?|expires?|closes?)\\s+(jan(uary)?|feb(ruary)?|mar(ch)?|apr(il)?|may|june?|july?|aug(ust)?|sep(t(ember)?)?|oct(ober)?|nov(ember)?|dec(ember)?|monday|tuesday|wednesday|thursday|friday|saturday|sunday|tonight|tomorrow|midnight|the weekend|the end of (the )?(day|week|month|year)|the \\d{1,2}(st|nd|rd|th)?\\b|\\d{1,2}/\\d{1,2})", "\\b(until|till|before|by|ends?|expires?|closes?)\\s+(jan(uary)?|feb(ruary)?|mar(ch)?|apr(il)?|may|june?|july?|aug(ust)?|sep(t(ember)?)?|oct(ober)?|nov(ember)?|dec(ember)?|monday|tuesday|wednesday|thursday|friday|saturday|sunday|tonight|tomorrow|midnight|the weekend|the end of (the )?(day|week|month|year)|the \\d{1,2}(st|nd|rd|th)?\\b|\\d{1,2}/\\d{1,2}).*\\bfree\\b"]
+    },
+    {
+      "id": "the-swap",
+      "name": "The swap",
+      "move": "Set the new thing against the one viewers already use, as a replacement.",
+      "template": "{New thing} just replaced {familiar thing} for me.",
+      "example": "A free notes app just replaced the paid one I'd used for six years.",
+      "on_screen": "I dropped the paid one",
+      "use_when": "Most viewers use the familiar thing and would switch for a clear reason.",
+      "source": "research",
+      "cues": ["\\b(replaced|replaces|kill(ed|s)?|better than|instead of|vs\\.?|versus)\\b"]
+    },
+    {
+      "id": "the-question-they-ask",
+      "name": "The question they ask",
+      "move": "Open with the exact question a viewer would type into search, then answer it.",
+      "template": "How do you {do the thing} {in the specific situation}?",
+      "example": "How do you get your phone to stop waking you for group chats but not for your kids?",
+      "on_screen": "Mute group chats, not your kids",
+      "use_when": "It's a how-to people already search for; the answer is short.",
+      "source": "research",
+      "cues": ["^(how|what|why|which|where|when|can|is|are|do|does|should)\\b[^.!]*\\?$"]
+    },
+    {
+      "id": "just-out-my-use",
+      "name": "Just out, my use",
+      "move": "Name a launch, then skip the announcement and say the one thing you are already using it for.",
+      "template": "{Thing} came out {when}, and I'm already using it to {specific job}.",
+      "example": "The new camera app came out yesterday, and I'm already using it to scan receipts for my taxes.",
+      "on_screen": "Day 1: it does my receipts",
+      "use_when": "It's news, and you have a use the launch videos didn't show.",
+      "source": "research",
+      "cues": ["\\b(just (dropped|launched|released|came out)|is out|got launched)\\b.*\\b(i'?m|my|how i)\\b"]
+    },
+    {
+      "id": "same-test-two",
+      "name": "Same test, two contenders",
+      "move": "Give two options the same task and promise the result.",
+      "template": "I gave {A} and {B} the same {task}. One {clear result}.",
+      "example": "I gave two budgeting apps the same month of receipts. One missed $400.",
+      "on_screen": "Same receipts. One missed $400.",
+      "use_when": "You ran a fair comparison and the gap is big enough to show.",
+      "source": "research",
+      "cues": ["\\bsame (prompt|task|test|build|question)s?\\b", "\\bgave (both|them both|two|all (three|four|five|\\d+))\\b"]
+    },
+    {
+      "id": "hidden-shortcuts",
+      "name": "Hidden shortcuts, counted",
+      "move": "Promise a small, exact number of things most people don't know exist.",
+      "template": "{N} {shortcuts / settings / codes} for {thing} most people never find.",
+      "example": "Three keyboard shortcuts for your phone camera most people never find.",
+      "on_screen": "3 hidden camera shortcuts",
+      "use_when": "Each item is quick to show and genuinely hidden.",
+      "source": "research",
+      "cues": ["\\b(\\d+|two|three|four|five|six|seven|eight|nine|ten) (secret|hidden|cheat)\\b", "\\b(secret|cheat) codes?\\b", "\\b(\\d+|two|three|four|five|six|seven|eight|nine|ten) (ways|things|tools|tricks|settings|features|apps)\\b.*\\b(didn'?t|don'?t|never) know\\b"]
+    },
+    {
+      "id": "part-n",
+      "name": "Part N of a series",
+      "move": "Label the Reel as one entry in a running list, so returning viewers know the format.",
+      "template": "{Series title}, part {N}: {this entry}.",
+      "example": "Things your phone can do that you never use, part 4: it measures a room.",
+      "on_screen": "Things your phone can do (part 4)",
+      "use_when": "You post a run of entries on one theme; works best once the series has followers.",
+      "source": "research",
+      "cues": ["\\bpart (\\d+|one|two|three|four|five|six|seven|eight|nine|ten)\\b"]
+    },
+    {
+      "id": "done-in-minutes",
+      "name": "Done in minutes",
+      "move": "Promise the result and the exact time it takes to set up.",
+      "template": "You can {get result} in {N minutes / seconds}.",
+      "example": "You can give your front door camera a voice in 10 minutes.",
+      "on_screen": "Set up in 10 minutes",
+      "use_when": "Setup really is that quick, and the result is the draw.",
+      "source": "research",
+      "cues": ["\\bin (\\d+|a few|two|three|five|ten|thirty) (seconds|minutes|mins)\\b", "\\bsetup in\\b"]
+    },
+    {
+      "id": "while-you-were-away",
+      "name": "While you were away",
+      "move": "Show the work happening while you slept, left, or closed the laptop.",
+      "template": "{Thing} kept {working / watching} while I {slept / left / closed the laptop}.",
+      "example": "My laptop was shut all night and it still finished the edit.",
+      "on_screen": "Lid closed. Still working.",
+      "use_when": "The surprise is that nobody had to be there.",
+      "source": "research",
+      "cues": ["\\bwhile (i|you) (slept|sleep|were|was)\\b", "\\b(close|closed) (your|my|the) (laptop|macbook|lid)\\b", "\\bkeeps? working\\b"]
+    },
+    {
+      "id": "one-prompt-result",
+      "name": "One ask, whole result",
+      "move": "Show a finished result and say how little it took to ask for it.",
+      "template": "I made {finished thing} with one {message / prompt}.",
+      "example": "I made this whole birthday invite with one message.",
+      "on_screen": "One message. This invite.",
+      "use_when": "The finished thing is on screen in the first second.",
+      "source": "research",
+      "cues": ["\\b(one|a single|1) (prompt|message|sentence)\\b"]
+    },
+    {
+      "id": "cheaper-way",
+      "name": "The cheaper way",
+      "move": "Promise the same result for less money or less of something people pay for.",
+      "template": "How to {get the same thing} for {N% less / free}.",
+      "example": "How to get the same phone plan for half the price, without switching carriers.",
+      "on_screen": "Same plan, half the price",
+      "use_when": "You can show the saving with your own numbers.",
+      "source": "research",
+      "cues": ["\\b(\\d+% less|save (your|on|money)|cheaper|for less|half the price)\\b"]
+    },
+    {
+      "id": "what-it-cost-me",
+      "name": "What it cost me",
+      "move": "Open on a loss you took, in money or time, then show what you do now.",
+      "template": "{Doing it the old way} cost me {amount}.",
+      "example": "Forgetting one renewal date cost me $240 last year.",
+      "on_screen": "This cost me $240",
+      "use_when": "There's a real, sizeable cost you paid yourself.",
+      "source": "craft",
+      "cues": ["\\bcost me\\b", "\\b(lost|wasted) (\\$|\\d)"]
+    },
+    {
+      "id": "my-mistake",
+      "name": "My mistake",
+      "move": "Admit something you did wrong for a while, specifically, so viewers check whether they do it too.",
+      "template": "For {time} I {did the wrong thing}.",
+      "example": "For two years I charged my phone overnight on the wrong setting.",
+      "on_screen": "I did this wrong for 2 years",
+      "use_when": "The mistake is common and the fix is quick.",
+      "source": "craft",
+      "cues": ["\\bfor (\\d+|two|three|years|months)\\b.*\\bi (was|did|had)\\b", "\\bmy (biggest |worst )?mistake\\b", "\\bi (was|did|had|got) (it |this |that )?(all )?wrong\\b", "\\bi made (a|one|the) mistake\\b"]
+    },
+    {
+      "id": "from-to",
+      "name": "From this to that",
+      "move": "Give the before and after as two numbers.",
+      "template": "{Task} went from {before} to {after}.",
+      "example": "My weekly grocery list went from 40 minutes to 5.",
+      "on_screen": "40 min → 5 min",
+      "use_when": "You measured both sides and the gap is large.",
+      "source": "craft",
+      "cues": ["^\\$?\\d[\\d,.]*%?( \\w+)? to \\$?\\d", "\\bfrom \\$?\\d[\\d,.]*\\s*\\w*\\b.*\\bto \\$?\\d", "\\b(from|went from) (zero|nothing|none|\\d[\\d,.]*\\w*) .*\\bto (\\$?\\d|zero|none)"]
+    },
+    {
+      "id": "stop-doing",
+      "name": "Stop doing this",
+      "move": "Tell viewers to stop a specific habit, and name the habit exactly.",
+      "template": "Stop {specific habit}.",
+      "example": "Stop typing your address into every checkout page.",
+      "on_screen": "Stop typing your address",
+      "use_when": "The habit is widespread and you have the better way ready.",
+      "source": "craft",
+      "cues": ["^(stop|quit|don'?t|never) \\w+"]
+    },
+    {
+      "id": "if-you-are",
+      "name": "If you're this person",
+      "move": "Call out exactly who the Reel is for in the first words.",
+      "template": "If you {specific situation}, {what to do / what you're missing}.",
+      "example": "If you run a bakery and still take orders by phone, watch this.",
+      "on_screen": "Bakeries taking orders by phone",
+      "use_when": "The audience is narrow and they'd recognise themselves at once.",
+      "source": "craft",
+      "cues": ["^if you('re| are| run| have| use| still)\\b"]
+    },
+    {
+      "id": "the-line-someone-said",
+      "name": "The line someone said",
+      "move": "Open on a quote, from a client, a friend or a comment, that sets up the story.",
+      "template": "\"{The exact line},\" {who} said.",
+      "example": "\"Can it just tell me when the parcel arrives?\" my neighbour asked.",
+      "on_screen": "\"Can it just tell me?\"",
+      "use_when": "Someone really said it, and it's the question your Reel answers.",
+      "source": "craft",
+      "cues": ["\\b(said|asked|told) me\\b", "\\b(client|friend|boss|wife|husband|mom|dad|customer|someone|commenter|comment|manager|kid)\\b (said|asked|told|wrote)\\b"]
+    },
+    {
+      "id": "in-the-middle",
+      "name": "In the middle of it",
+      "move": "Start inside the moment as it happened, with no set-up, so the viewer wants to know how it ends.",
+      "template": "{The moment, present or just past tense}, so I {what you did}.",
+      "example": "The train stopped in a tunnel, so I asked my phone to tell me the second it moved.",
+      "on_screen": "Stuck in a tunnel",
+      "use_when": "You have a real scene with a clear problem in it.",
+      "source": "craft",
+      "cues": ["^(so )?(the|my|our) \\w+ (just )?(stopped|broke|crashed|died|got|went)\\b"]
+    },
+    {
+      "id": "everyone-says",
+      "name": "Everyone says, I tried",
+      "move": "State a common belief, then say you tested it and it went differently.",
+      "template": "Everyone says {belief}. I tried it for {time}.",
+      "example": "Everyone says meal prep saves money. I tracked it for a month.",
+      "on_screen": "I tracked it for a month",
+      "use_when": "You have your own test that complicates the belief.",
+      "source": "craft",
+      "cues": ["\\beveryone (says|thinks|tells)\\b", "\\bthey (say|told)\\b"]
+    },
+    {
+      "id": "the-number-first",
+      "name": "The number first",
+      "move": "Lead with one surprising, checkable number, then say what it means for the viewer.",
+      "template": "{Number} {what it counts}. {Why it matters to you}.",
+      "example": "Nine out of ten phone chargers in my house were the slow kind.",
+      "on_screen": "9 of 10 were the slow kind",
+      "use_when": "The number is real, sourced or yours, and surprising.",
+      "source": "craft",
+      "cues": ["^\\$?\\d[\\d,.]*%?\\b", "^(one|two|three|four|five|six|seven|eight|nine|ten) (out of|in)\\b"]
+    },
+    {
+      "id": "watch-this",
+      "name": "Result on screen first",
+      "move": "Show the finished result in the first second and say only what it is; explain after.",
+      "template": "This is {result}, and {how little it took}.",
+      "example": "This is my whole week planned, and I didn't touch the calendar.",
+      "on_screen": "My week, planned for me",
+      "use_when": "The result is visual and makes sense without explanation.",
+      "source": "craft",
+      "cues": ["^(this is (my|the|what|how|me)|look at (this|my)|watch (this|me))\\b"]
+    },
+    {
+      "id": "i-tested-it",
+      "name": "I tried it for N days",
+      "move": "Promise what happened after you used something for a set time.",
+      "template": "I used {thing} for {N days} instead of {usual}.",
+      "example": "I used only voice notes for a week instead of typing.",
+      "on_screen": "A week of voice notes only",
+      "use_when": "You did the test and the outcome is interesting either way.",
+      "source": "craft",
+      "cues": ["\\b(tried|tested|used|ran|did)\\b.*\\bfor (\\d+|a|one|two|three|seven|ten|thirty) (days?|weeks?|months?)\\b", "\\b(\\d+|seven|ten|thirty)[- ]day (test|challenge|experiment)\\b"]
+    }
+  ]
+}

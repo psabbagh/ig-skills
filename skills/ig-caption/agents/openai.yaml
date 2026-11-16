@@ -1,0 +1,4 @@
+interface:
+  display_name: "IG Caption"
+  short_description: "Write an Instagram caption and check it before posting"
+  default_prompt: "Use $ig-caption to write and check the caption for this Reel script."

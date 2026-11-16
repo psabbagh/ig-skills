@@ -1,0 +1,4 @@
+interface:
+  display_name: "IG Engage"
+  short_description: "Sort your comments, draft every reply and keyword DM"
+  default_prompt: "Use $ig-engage to sort the comments on my latest Reel, draft my replies, and list everyone who commented GUIDE with a DM to send."

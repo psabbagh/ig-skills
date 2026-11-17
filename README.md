@@ -90,16 +90,16 @@ You don't have to type a command: ask in plain words and the right skill starts.
 a command, type `/` in Claude Code and pick one (they show as `ig-skills:ig-reel` and so on),
 or `$` in Codex.
 
-| Skill | What it does | Try this |
-|---|---|---|
-| [**ig-research**](#ig-research), the virality skill | Finds the top Reels on your idea, and why they worked | *Find the top Reels on "meal prep for busy parents" and show me how the winners open.* |
-| [**ig-reel**](#ig-reel) | Writes your Reel from what already worked | *Write me a Reel about how I got my first client from one comment, for freelance designers.* |
-| [**ig-script**](#ig-script) | Checks a script makes sense to a cold listener | *Check this Reel script before I record it:* (paste your script) |
-| [**ig-voice**](#ig-voice) | Makes your text sound like you, not AI | *Learn my voice from these captions:* (paste 5 to 10) |
-| [**ig-caption**](#ig-caption) | Writes your caption and checks it | *Write the caption for this Reel script.* |
-| [**ig-profile**](#ig-profile) | Scores your profile out of 100 and rewrites it | *Score my Instagram profile @yourhandle and rewrite the weakest parts.* |
-| [**ig-engage**](#ig-engage) | Replies to your comments, writes comments on others' posts | *Go through the comments on my latest Reel and list everyone who commented GUIDE with a DM to send.* |
-| [**ig-plan**](#ig-plan) | Plans your week: what, when, and who to engage with | *Plan my Instagram week. I can post 4 times.* |
+| Skill | Try this |
+|---|---|
+| [**ig-research**](#ig-research): finds the top Reels on your idea, and why they worked | *Find the top Reels on "meal prep for busy parents" and show me how the winners open.* |
+| [**ig-reel**](#ig-reel): writes your Reel from what already worked | *Write me a Reel about how I got my first client from one comment, for freelance designers.* |
+| [**ig-script**](#ig-script): checks a script makes sense to a cold listener | *Check this Reel script before I record it:* (paste your script) |
+| [**ig-voice**](#ig-voice): makes your text sound like you, not AI | *Learn my voice from these captions:* (paste 5 to 10) |
+| [**ig-caption**](#ig-caption): writes your caption and checks it | *Write the caption for this Reel script.* |
+| [**ig-profile**](#ig-profile): scores your profile out of 100 and rewrites it | *Score my Instagram profile @yourhandle and rewrite the weakest parts.* |
+| [**ig-engage**](#ig-engage): replies to your comments, writes comments on others' posts | *Go through the comments on my latest Reel and list everyone who commented GUIDE with a DM to send.* |
+| [**ig-plan**](#ig-plan): plans your week: what, when, and who to engage with | *Plan my Instagram week. I can post 4 times.* |
 
 They work together: research an idea, write the Reel from it, check the script, write the
 caption, then plan the week from your research and your own posts. Each one also works alone.

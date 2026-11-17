@@ -80,7 +80,8 @@ class Manifests(unittest.TestCase):
                     "codex plugin add ig-skills@ig-skills"):
             self.assertIn(cmd, readme)
         self.assertTrue(readme.startswith("# IG Skills"))
-        self.assertIn("To set it up, just go to Claude and paste in the link", readme)
+        self.assertIn("To set it up, open Claude Code and paste this message", readme)
+        self.assertIn("Install the IG Skills plugin from https://github.com/psabbagh/ig-skills", readme.split("## 1.")[0])
 
 
 if __name__ == "__main__":

@@ -99,7 +99,7 @@ or `$` in Codex.
 | [**ig-caption**](#ig-caption): writes your caption and checks it | *Write the caption for this Reel script.* |
 | [**ig-profile**](#ig-profile): scores your profile out of 100 and rewrites it | *Score my Instagram profile @yourhandle and rewrite the weakest parts.* |
 | [**ig-engage**](#ig-engage): replies to your comments, writes comments on others' posts | *Go through the comments on my latest Reel and list everyone who commented GUIDE with a DM to send.* |
-| [**ig-plan**](#ig-plan): plans your week: what, when, and who to engage with | *Plan my Instagram week. I can post 4 times.* |
+| [**ig-plan**](#ig-plan): plans your week (what, when, and who to engage with) | *Plan my Instagram week. I can post 4 times.* |
 
 They work together: research an idea, write the Reel from it, check the script, write the
 caption, then plan the week from your research and your own posts. Each one also works alone.

@@ -502,5 +502,31 @@ class Packaging(unittest.TestCase):
             self.assertNotIn(f"import {mod}", imports)
 
 
+class SharedTells(unittest.TestCase):
+    """tells.py is shared with the humanize skill as an identical copy."""
+
+    def test_matches_humanize_copy(self):
+        other = SKILL.parent / "humanize" / "scripts" / "tells.py"
+        if not other.exists():
+            self.skipTest("humanize is not beside this skill")
+        self.assertEqual((SKILL / "scripts" / "tells.py").read_text(), other.read_text(),
+                         "tells.py differs from humanize's copy: change both")
+
+    def test_strong_shared_tells_are_listed(self):
+        for line in ("Studies show most creators quit.", "I'm not saying you need more followers.",
+                     "The launch was huge, highlighting how much people wanted it.",
+                     "As of my last update, it was free."):
+            with self.subTest(line=line):
+                res = voice.check(line, None, "caption")
+                self.assertTrue(res["rewrite"], line)
+
+    def test_a_shared_tell_the_creator_uses_is_not_listed(self):
+        samples = [s + " The real question is time." for s in SAMPLES]
+        prof = voice.build_profile(samples)
+        res = voice.check("The real question is money.", prof, "caption")
+        self.assertFalse(any("hidden truth" in r for item in res["rewrite"] for r in item["reasons"]))
+        self.assertTrue(voice.check("The real question is money.", None, "caption")["rewrite"])
+
+
 if __name__ == "__main__":
     unittest.main()

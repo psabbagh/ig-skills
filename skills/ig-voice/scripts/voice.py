@@ -47,6 +47,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import patterns as P  # noqa: E402
+import tells as TL  # noqa: E402  (shared with humanize; identical copy)
 
 DISCLAIMER = ("These checks are local heuristics. They point at lines worth a second look. They are not "
               "an AI detector and say nothing about how any detector would score the text.")
@@ -384,7 +385,8 @@ def build_profile(samples):
     raw_tidy = "\n".join(texts)
     n = len(texts)
     total_words = sum(wps) or 1
-    used_stock = sorted({rx for rx, _ in P.STOCK_PHRASES for s in all_sents if re.search(rx, low(s))})
+    used_stock = sorted({rx for rx, _ in P.STOCK_PHRASES for s in all_sents if re.search(rx, low(s))}
+                        | {rx for _, rx, *_ in TL.PHRASES for s in all_sents if re.search(rx, TL.norm(s), re.I)})
     used_formal = sorted({w for w in P.FORMAL_WORDS if w in word_bag or re.search(r"\b" + w + r"\b", low(raw))})
     phrases = [g for g, c in doc_phrases.most_common() if repeated_habit(g, c, doc_grams, doc_content)]
     # keep the longest phrase when a shorter one only ever appears inside it
@@ -663,6 +665,11 @@ def shape_flags(sents, prof=None):
     for i in range(len(texts) - 2):
         if texts[i].startswith("no ") and texts[i + 1].startswith("no ") and texts[i + 2].startswith("just "):
             add(i + 2, '"No X. No Y. Just Z." pattern: say what it is')
+    # strong shapes from the shared list (humanize's tells.py), where this file has no flag of its own
+    for i, hs in TL.find_shapes([s for _, s in sents]).items():
+        for h in hs:
+            if h["strength"] == TL.STRONG and i not in flags:
+                add(i, h["hint"])
     triples = [i for i, s in enumerate(texts) if TRIPLE_RE.search(s)]
     total = sum(len(words(s)) for s in texts) or 1
     usual = (prof or {}).get("triples_per_100_words")
@@ -684,6 +691,12 @@ def phrase_flags(sents, prof):
             m = re.search(rx, low(s))
             if m:
                 flags.setdefault(i, []).append(f'"{m.group(0).strip()}" ({why})')
+        # the strong tells from the shared list that patterns.py does not already catch
+        seen = " ".join(flags.get(i, [])).lower()
+        for h in TL.find_phrases(s, skip=used):
+            if h["strength"] == TL.STRONG and h["group"] != "stock" and h["match"].lower() not in seen:
+                flags.setdefault(i, []).append(f'"{h["match"]}" ({h["hint"]})')
+                seen += " " + h["match"].lower()
     return flags
 
 

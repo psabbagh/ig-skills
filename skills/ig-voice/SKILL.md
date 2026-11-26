@@ -89,6 +89,5 @@ Then run `check` again on the rewrite. If it still flags something, fix that onc
 - **What was fixed automatically**, in one line per kind.
 - **What was rewritten and why**, one line each, in plain words.
 - **Anything left**, with your reason for leaving it.
-- One line that these are local checks against their profile, not a detector.
 
 When another skill called this one, return the final text and the report file path and nothing else.

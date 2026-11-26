@@ -316,7 +316,7 @@ class CommandLine(unittest.TestCase):
             self.assertIn("Checked against your voice profile", report)
             self.assertIn("contrast frame", report)
             self.assertIn('"i will": you write', report)
-            self.assertIn("not an AI detector", report)
+            self.assertNotIn("detector", report)  # no closing disclaimer since 2026-11-26
             self.assertNotIn("## Cleaned text", report)
 
             r = self.run_cli("check", "-", "--json", env=env, stdin="Great question! Here's a caption.")

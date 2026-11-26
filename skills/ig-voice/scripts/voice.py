@@ -49,8 +49,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import patterns as P  # noqa: E402
 import tells as TL  # noqa: E402  (shared with humanize; identical copy)
 
-DISCLAIMER = ("These checks are local heuristics. They point at lines worth a second look. They are not "
-              "an AI detector and say nothing about how any detector would score the text.")
 KINDS = ("caption", "script", "dm", "comment")
 MIN_SAMPLES = 5
 
@@ -892,7 +890,6 @@ def check(text, prof=None, kind="caption", keep_markdown=False, top=5):
         "your_words": {"phrases": (prof or {}).get("signature_phrases", [])[:10],
                        "words": (prof or {}).get("signature_words", [])[:15]},
         "sentences": len(sents),
-        "note": DISCLAIMER,
     }
 
 
@@ -933,7 +930,6 @@ def render(res, profile_label, include_text=True):
             out.append("- phrases you repeat: " + ", ".join(f'"{p}"' for p in yw["phrases"]))
         if yw["words"]:
             out.append("- words you come back to: " + ", ".join(yw["words"]))
-    out += ["", res["note"]]
     if include_text:
         out += ["", "## Cleaned text", "", "```text", res["cleaned"].rstrip("\n"), "```"]
     return "\n".join(out) + "\n"
